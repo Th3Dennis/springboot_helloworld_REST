@@ -2,6 +2,8 @@ plugins {
 	id 'org.springframework.boot' version '2.2.5.RELEASE'
 	id 'io.spring.dependency-management' version '1.0.9.RELEASE'
 	id 'java'
+	id 'war'
+	id "org.sonarqube" version "3.0"
 }
 group = 'ch.noseryoung'
 version = '0.0.1-SNAPSHOT'
@@ -46,6 +48,13 @@ dependencies {
 	// mockito
 	testImplementation "org.mockito:mockito-core:3.0.0"
 }
+
+sonarqube {
+  properties {
+    property "sonar.projectKey", "Th3Dennis_springboot_helloworld_REST"
+  }
+}
+
 test {
 	useJUnitPlatform()
 }
