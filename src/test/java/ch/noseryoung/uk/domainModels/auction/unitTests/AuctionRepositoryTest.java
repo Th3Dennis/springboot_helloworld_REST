@@ -48,7 +48,6 @@ class AuctionRepositoryTest {
 
     @Test
     public void NF123442_getAll_requestAllAuctions_returnsAllUsersAuctions() throws Exception {
-        Assertions.assertThat(1).isEqualTo(1);
 
 
         Optional<Auction> auction1 = auctionRepository.findById(auctionRepository.save(auctionToBeTestedAgainst1).getId());
