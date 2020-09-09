@@ -40,6 +40,7 @@ public class AuctionIntegrationTest {
         auction1 = auctionRepository.save(auction1);
         auction2 = auctionRepository.save(auction2);
 
+        //Perform with the mock
         mockMvc.perform(
                 MockMvcRequestBuilders.get("/auctions")
                         .accept(MediaType.APPLICATION_JSON))
