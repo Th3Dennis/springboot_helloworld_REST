@@ -11,9 +11,6 @@ before_install:
   - chmod +x gradlew
   - sudo apt-get update
 
-install:
-  - sudo apt install curl
-  - npm install -g newman
 
 addons:
   sonarcloud:
