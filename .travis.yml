@@ -11,15 +11,8 @@ before_install:
   - chmod +x gradlew
   - sudo apt-get update
 
-addons:
-  sonarcloud:
-    organization: $SONAR_USER
-    token: $SONAR_TOKEN
-
 jobs:
   include:
-    - stage: continousIntegration
-      script: ./gradlew sonarqube
     - stage: continousDelivery
       deploy:
         provider: heroku
