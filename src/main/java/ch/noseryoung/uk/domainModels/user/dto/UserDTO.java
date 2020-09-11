@@ -20,7 +20,7 @@ public class UserDTO {
 
     private Set<RoleDTO> roles;
 
-    private List<AuctionDTO> auctions;
+    //private List<AuctionDTO> auctions;
 
     private Boolean locked;
 
@@ -57,6 +57,7 @@ public class UserDTO {
         return this;
     }
 
+    /*
     public void setAuctions(List<AuctionDTO> auctions) {
         this.auctions = auctions;
     }
@@ -64,6 +65,8 @@ public class UserDTO {
     public List<AuctionDTO> getAuctions() {
         return auctions;
     }
+
+     */
 
     public Set<RoleDTO> getRoles() {
         return roles;
