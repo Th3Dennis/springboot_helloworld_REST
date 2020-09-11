@@ -1,33 +1,28 @@
 language: node_js
 
- 
-
 node_js:
   - 10
 
- 
-
 stages:
   - continousIntegration
-
- 
+  - continousDelivery
 
 before_install:
   - chmod +x gradlew
   - sudo apt-get update
 
 
- 
-
 addons:
   sonarcloud:
     organization: $SONAR_USER
     token: $SONAR_TOKEN
 
- 
-
 jobs:
   include:
     - stage: continousIntegration
       script: ./gradlew sonarqube
-    
+    - stage: continousDelivery
+      deploy:
+        provider: heroku
+        api-key: $HEROKU_API_KEY
+        app: $HEROKU_STAGING_APP      

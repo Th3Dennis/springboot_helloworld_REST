@@ -1,0 +1,7 @@
+{
+  "name": "Spring Boot App",
+  "description": "Spring Boot App with CICD",
+  "repository": "https://github.com/Th3Dennis/springboot_helloworld_REST",
+  "logo": "https://node-js-sample.herokuapp.com/node.png",
+  "keywords": ["node", "express", "static"]
+}
